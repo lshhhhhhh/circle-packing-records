@@ -85,8 +85,9 @@ max-min objective is smoothed via an auxiliary variable
 Radii in the published files are uniformly reduced by 1e-15 so that all
 constraints hold strictly in exact arithmetic, not merely in float64.
 
-The search pipeline was developed with AI assistance (Anthropic Claude Code);
-the search itself uses no LLM at run time. Improvements for n=24 and n=27 are
+This work was done in collaboration with an AI — Anthropic's Claude
+(Fable 5 model, via Claude Code) — which designed and operated the search
+pipeline; the search itself uses no LLM at run time. Improvements for n=24 and n=27 are
 being further refined; this repository will be updated if better values are found.
 
 ## License
