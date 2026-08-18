@@ -1,7 +1,7 @@
 # Improved packings: circles in a perimeter-4 rectangle, maximizing the sum of radii
 
 **Author:** Shaoheng Lai ([@lshhhhhhh](https://github.com/lshhhhhhh))
-**Date:** 2026-08-17
+**Date:** 2026-08-17 (n=28..30 added the same day)
 **Problem:** Place `n` disjoint circles (arbitrary radii) inside a rectangle of
 perimeter 4 (width + height = 2, aspect ratio free) so as to maximize the sum of
 the radii. Best-known values are tracked on
@@ -28,6 +28,9 @@ arithmetic treating each decimal coordinate as exact (see *Verification*).
 | 25 | 2.592537644819718 | 2.5925376898234096 | +4.5e-08 | refinement of known configuration |
 | 26 | 2.639308122181169 | 2.6393205589877593 | +1.2e-05 | tighter convergence of known configuration |
 | **27** | 2.690155081571631 | **2.6915233606710185** | **+1.4e-03** | **new configuration** |
+| **28** | 2.737084327032409 | **2.7409756000878951** | **+3.9e-03** | **new configuration** |
+| **29** | 2.790292090706999 | **2.7926397270705987** | **+2.3e-03** | **new configuration** |
+| **30** | 2.843145785181738 | **2.8444939659281285** | **+1.3e-03** | **new configuration** |
 
 "New configuration" means the packing differs structurally from the database
 entry (radius multisets differ at the 1e-2 level; optimal point-matching
@@ -40,10 +43,13 @@ line 1 = `n`, line 2 = sum of radii, then one `x y r` triple per line.
 
 ## Figures
 
-The two new configurations differ visibly from the previous records:
+The five new configurations differ visibly from the previous records:
 
 ![n=24 comparison](figures/n24_comparison.png)
 ![n=27 comparison](figures/n27_comparison.png)
+![n=28 comparison](figures/n28_comparison.png)
+![n=29 comparison](figures/n29_comparison.png)
+![n=30 comparison](figures/n30_comparison.png)
 
 All eight packings of this repository:
 
