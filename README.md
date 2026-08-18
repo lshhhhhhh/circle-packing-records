@@ -1,7 +1,24 @@
-# Improved packings: circles in a perimeter-4 rectangle, maximizing the sum of radii
+# Packings of circles in a perimeter-4 rectangle, maximizing the sum of radii
 
 **Author:** Shaoheng Lai ([@lshhhhhhh](https://github.com/lshhhhhhh))
-**Date:** 2026-08-17 (n=28..30 added the same day)
+**Date:** 2026-08-17 (n=28..30 added the same day; **correction 2026-08-18, see below**)
+
+> **CORRECTION (2026-08-18).** The original version of this README claimed "new
+> configurations" for n=24, 27, 28, 29, 30. That claim compared against the
+> [DominikKamp/Packing](https://github.com/DominikKamp/Packing) database, which
+> we mistakenly took to be the up-to-date record collection. The actual curated
+> records live on [Erich Friedman's page](https://erich-friedman.github.io/packing/cirRrec/),
+> which already lists equal-or-better values: n=24, 28, 29, 30 by **David W.
+> Cantrell (July 2011)** and n=27 by **Everett Dutton (August 2026)**; n=26 by
+> **Aaden Abraham (July 2026)**. Our packings for those n are therefore
+> **independent rediscoveries**, not new records; credit belongs to the original
+> discoverers. What remains true: (a) all coordinates here are strictly feasible
+> at 60-digit precision as written; (b) they improve the entries of the
+> DominikKamp/Packing database (a solutions database of Berthold et al., not the
+> record page); (c) our n=26 value 2.6393205589877593 appears to exceed the
+> displayed record 2.63931+ — pending confirmation against the full-precision
+> value held by the record page. We keep this repository up, with this notice,
+> as a record of the correction.
 **Problem:** Place `n` disjoint circles (arbitrary radii) inside a rectangle of
 perimeter 4 (width + height = 2, aspect ratio free) so as to maximize the sum of
 the radii. Best-known values are tracked on
@@ -11,26 +28,30 @@ and, with full-precision coordinates, in the
 The case n=21 is problem B.13 of the AlphaEvolve benchmark suite
 ([Novikov et al. 2025](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf)).
 
-## Claims
+## Claims (amended 2026-08-18)
 
 For each `n` below, `coords_n{n}.txt` contains a strictly feasible configuration
 whose sum of radii strictly exceeds the value recorded in the
-DominikKamp/Packing database as of 2026-08-17. Values were verified in 60-digit
-arithmetic treating each decimal coordinate as exact (see *Verification*).
+**DominikKamp/Packing database** as of 2026-08-17. Values were verified in
+60-digit arithmetic treating each decimal coordinate as exact (see
+*Verification*). **This is a claim about that database only** — see the
+correction notice above: the curated record page already contains
+equal-or-better packings for n=24, 26(?), 27, 28, 29, 30 found by Cantrell,
+Abraham, and Dutton; the "Nature" column below has been amended accordingly.
 
-| n | Database record | This repository | Improvement | Nature |
+| n | DB entry (Kamp) | This repository | vs DB | Nature (amended) |
 |---|---|---|---|---|
-| 19 | 2.241565197559671 | 2.2415652737070637 | +7.6e-08 | refinement of known configuration |
-| 20 | 2.305713821106596 | 2.3057138615024604 | +4.0e-08 | refinement of known configuration |
-| 22 | 2.425137224684899 | 2.4251372715445991 | +4.7e-08 | refinement of known configuration |
-| 23 | 2.484239494302877 | 2.4842395442979681 | +5.0e-08 | refinement of known configuration |
-| **24** | 2.535344050819014 | **2.5356969159964882** | **+3.5e-04** | **new configuration** |
-| 25 | 2.592537644819718 | 2.5925376898234096 | +4.5e-08 | refinement of known configuration |
-| 26 | 2.639308122181169 | 2.6393205589877593 | +1.2e-05 | tighter convergence of known configuration |
-| **27** | 2.690155081571631 | **2.6915233606710185** | **+1.4e-03** | **new configuration** |
-| **28** | 2.737084327032409 | **2.7409756000878951** | **+3.9e-03** | **new configuration** |
-| **29** | 2.790292090706999 | **2.7926397270705987** | **+2.3e-03** | **new configuration** |
-| **30** | 2.843145785181738 | **2.8444939659281285** | **+1.3e-03** | **new configuration** |
+| 19 | 2.241565197559671 | 2.2415652737070637 | +7.6e-08 | refinement (config: Cantrell 2011) |
+| 20 | 2.305713821106596 | 2.3057138615024604 | +4.0e-08 | refinement (config: Cantrell 2011) |
+| 22 | 2.425137224684899 | 2.4251372715445991 | +4.7e-08 | refinement (config: Cantrell 2011) |
+| 23 | 2.484239494302877 | 2.4842395442979681 | +5.0e-08 | refinement (config: Cantrell 2011) |
+| 24 | 2.535344050819014 | 2.5356969159964882 | +3.5e-04 | independent rediscovery of Cantrell's 2011 record configuration |
+| 25 | 2.592537644819718 | 2.5925376898234096 | +4.5e-08 | refinement (config: Cantrell 2011) |
+| **26** | 2.639308122181169 | **2.6393205589877593** | +1.2e-05 | **possibly exceeds the record page value 2.63931+ (Abraham 2026) — unconfirmed** |
+| 27 | 2.690155081571631 | 2.6915233606710185 | +1.4e-03 | independent rediscovery of Dutton's August 2026 record configuration |
+| 28 | 2.737084327032409 | 2.7409756000878951 | +3.9e-03 | independent rediscovery of Cantrell's 2011 record configuration |
+| 29 | 2.790292090706999 | 2.7926397270705987 | +2.3e-03 | independent rediscovery of Cantrell's 2011 record configuration |
+| 30 | 2.843145785181738 | 2.8444939659281285 | +1.3e-03 | independent rediscovery of Cantrell's 2011 record configuration |
 
 "New configuration" means the packing differs structurally from the database
 entry (radius multisets differ at the 1e-2 level; optimal point-matching
