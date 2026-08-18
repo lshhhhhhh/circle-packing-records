@@ -38,6 +38,17 @@ belongs to their original discoverers (David W. Cantrell; Timo Berthold et al.).
 Coordinate files use the same format as the DominikKamp/Packing database:
 line 1 = `n`, line 2 = sum of radii, then one `x y r` triple per line.
 
+## Figures
+
+The two new configurations differ visibly from the previous records:
+
+![n=24 comparison](figures/n24_comparison.png)
+![n=27 comparison](figures/n27_comparison.png)
+
+All eight packings of this repository:
+
+![all packings](figures/all_packings.png)
+
 ## Verification
 
 `verify.py` is self-contained (only dependency: [mpmath](https://mpmath.org/))
